@@ -1,0 +1,819 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Be My Valentine 💘</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<!-- theme-memories enables the ambient glow switching -->
+<body class="theme-memories">
+  <div class="bg-hearts" aria-hidden="true"></div>
+  
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <!-- FX canvas for hearts bursts + sparkles -->
+  <canvas id="fxCanvas" aria-hidden="true"></canvas>
+
+  <!-- MUSIC -->
+  <audio id="bgMusic" preload="auto" loop>
+    <source src="love.mp3" type="audio/mpeg" />
+  </audio>
+
+  <audio id="quizMusic" preload="auto" loop>
+    <source src="quiz.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- Voice note -->
+  <audio id="voiceNote" preload="auto">
+    <source src="voice.mp3" type="audio/mpeg" />
+  </audio>
+
+  <main class="container">
+
+    <!-- SCREEN 1 -->
+    <section id="screenAsk" class="screen is-active">
+      <header class="top">
+        <div class="badge">For my favorite person 💖</div>
+        <h1 class="title">Will you be my Valentine meri jaan?</h1>
+        <p class="subtitle">Scroll slowly…every part of this is for you my sweetheart.</p>
+        <p class="hint" id="musicHint">🔊 Click to start the music</p>
+      </header>
+
+      <!-- LONG SCROLL MEMORIES -->
+      <section class="gallery" aria-label="Memories">
+
+        <!-- (Your gallery is kept exactly as you provided) -->
+
+        <figure class="card reveal">
+          <img src="images/pic1.jpg" alt="Memory 1"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+1'; this.classList.add('placeholder');" />
+          <figcaption>I love looking into your eyes my love 🩷</figcaption>
+        </figure>
+
+         <figure class="card reveal">
+          <img src="images/pic7.JPG" alt="Memory 7"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+4'; this.classList.add('placeholder');" />
+          <figcaption>Your poses are amazing 🩷</figcaption>
+        </figure>
+
+       
+
+        <figure class="card reveal">
+          <img src="images/pic3.JPG" alt="Memory 3"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+2'; this.classList.add('placeholder');" />
+          <figcaption>Thank you for always making me smile 🩷</figcaption>
+        </figure>
+
+        <figure class="card reveal">
+          <img src="images/pic4.JPG" alt="Memory 4"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+2'; this.classList.add('placeholder');" />
+          <figcaption>You are gorgeous my dear 🩷</figcaption>
+        </figure>
+
+        <figure class="card reveal">
+          <img src="images/pic5.JPG" alt="Memory 5"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+3'; this.classList.add('placeholder');" />
+          <figcaption>You always look amazing 🩷</figcaption>
+        </figure>
+
+        <figure class="card reveal">
+          <video class="scroll-video" muted loop playsinline preload="metadata" poster="images/poster2.jpg">
+            <source src="images/video1.mp4" type="video/mp4">
+          </video>
+          <figcaption>You have the most beautiful hair I have ever seen 🩷</figcaption>
+        </figure>
+
+        <figure class="card reveal">
+          <img src="images/pic6.JPG" alt="Memory 6"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+4'; this.classList.add('placeholder');" />
+          <figcaption>You are jawdropping 🩷</figcaption>
+        </figure>
+
+         <figure class="card reveal">
+          <img src="images/pic2.jpg" alt="Memory 2"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+2'; this.classList.add('placeholder');" />
+          <figcaption>You are the most beautiful girl I have ever seen 🩷</figcaption>
+        </figure>
+
+        <figure class="card reveal">
+          <img src="images/pic8.JPG" alt="Memory 8"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+4'; this.classList.add('placeholder');" />
+          <figcaption>You have the most beautiful eyes 🩷</figcaption>
+        </figure>
+
+        <figure class="card reveal">
+          <img src="images/pic9.JPG" alt="Memory 9"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+4'; this.classList.add('placeholder');" />
+          <figcaption>Your smile lights up my world 🩷</figcaption>
+        </figure>
+
+        <figure class="card reveal">
+          <img src="images/pic10.JPG" alt="Memory 10"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+4'; this.classList.add('placeholder');" />
+          <figcaption>I am so happy that you are in my life 🩷</figcaption>
+        </figure>
+
+        <figure class="card reveal">
+          <video class="scroll-video" muted loop playsinline preload="metadata" poster="images/poster2.jpg">
+            <source src="images/video2.mp4" type="video/mp4">
+          </video>
+          <figcaption>You are stunning my dear 🩷</figcaption>
+        </figure>
+
+        <figure class="card reveal">
+          <img src="images/pic30.JPG" alt="Memory 11"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+4'; this.classList.add('placeholder');" />
+          <figcaption>Thank you for always sending me the best photos ever 🩷</figcaption>
+        </figure>
+
+
+          <figure class="card reveal">
+          <img src="images/pic15.jpeg" alt="Memory 15"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+4'; this.classList.add('placeholder');" />
+          <figcaption>Thank you for making me the happiest person in the world 🩷</figcaption>
+        </figure>
+
+        <figure class="card reveal">
+          <img src="images/pic13.JPG" alt="Memory 13"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+4'; this.classList.add('placeholder');" />
+          <figcaption>Every outfit looks amazing on you 🩷</figcaption>
+        </figure>
+
+        <figure class="card reveal">
+          <img src="images/pic14.jpeg" alt="Memory 14"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+4'; this.classList.add('placeholder');" />
+          <figcaption>I love taking pictures with you 🩷</figcaption>
+        </figure>
+
+        <figure class="card reveal">
+          <img src="images/pic12.JPG" alt="Memory 12"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+4'; this.classList.add('placeholder');" />
+          <figcaption>You are always glowing 🩷</figcaption>
+        </figure>
+
+      
+
+        <figure class="card reveal">
+          <video class="scroll-video" muted loop playsinline preload="metadata" poster="images/poster2.jpg">
+            <source src="images/video3.mp4" type="video/mp4">
+          </video>
+          <figcaption>You are the prettiest girl ever 🩷</figcaption>
+        </figure>
+
+          <figure class="card reveal">
+          <img src="images/pic23.JPG" alt="Memory 23"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+4'; this.classList.add('placeholder');" />
+          <figcaption>Meri dil ki mukeen 🩷</figcaption>
+        </figure>
+
+          <figure class="card reveal">
+          <img src="images/pic32.jpg" alt="Memory 30"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+4'; this.classList.add('placeholder');" />
+          <figcaption>You are the most gorgeous girl in the world 🩷</figcaption>
+        </figure>
+
+        <figure class="card reveal">
+          <img src="images/pic18.jpeg" alt="Memory 18"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+4'; this.classList.add('placeholder');" />
+          <figcaption>Thank you for everything that you do 🩷</figcaption>
+        </figure>
+
+        <figure class="card reveal">
+          <img src="images/pic19.JPG" alt="Memory 19"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+4'; this.classList.add('placeholder');" />
+          <figcaption>You are the best 🩷</figcaption>
+        </figure>
+
+       
+
+         <figure class="card reveal">
+          <img src="images/pic25.JPEG" alt="Memory 25"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+4'; this.classList.add('placeholder');" />
+          <figcaption>Meri zindagi 🩷</figcaption>
+        </figure>
+
+        <figure class="card reveal">
+          <video class="scroll-video" muted loop playsinline preload="metadata" poster="images/poster2.jpg">
+            <source src="images/video4.mp4" type="video/mp4">
+          </video>
+          <figcaption>You are my sweetheart 🩷</figcaption>
+        </figure>
+
+        <figure class="card reveal">
+          <img src="images/pic21.JPG" alt="Memory 21"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+4'; this.classList.add('placeholder');" />
+          <figcaption>You are the prettiest girl ever 🩷</figcaption>
+        </figure>
+
+        <figure class="card reveal">
+          <img src="images/pic22.JPG" alt="Memory 22"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+4'; this.classList.add('placeholder');" />
+          <figcaption>You are more beautiful than every flower in the world 🩷</figcaption>
+        </figure>
+
+         <figure class="card reveal">
+          <img src="images/pic16.jpeg" alt="Memory 16"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+4'; this.classList.add('placeholder');" />
+          <figcaption>I hold you close in my heart always 🩷</figcaption>
+        </figure>
+
+        <figure class="card reveal">
+          <img src="images/pic24.JPEG" alt="Memory 24"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+4'; this.classList.add('placeholder');" />
+          <figcaption>Meri jaan 🩷</figcaption>
+        </figure>
+
+         <figure class="card reveal">
+          <img src="images/pic20.JPG" alt="Memory 20"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+4'; this.classList.add('placeholder');" />
+          <figcaption>You are my darling 🩷</figcaption>
+        </figure>
+
+        <figure class="card reveal">
+          <video class="scroll-video" muted loop playsinline preload="metadata" poster="images/poster2.jpg">
+            <source src="images/video5.mp4" type="video/mp4">
+          </video>
+          <figcaption>Meri dil ki sukoon 🩷</figcaption>
+        </figure>
+
+        <figure class="card reveal">
+          <img src="images/pic26.JPEG" alt="Memory 26"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+4'; this.classList.add('placeholder');" />
+          <figcaption>Thank you for loving me 🩷</figcaption>
+        </figure>
+
+
+        <figure class="card reveal">
+          <img src="images/pic33.jpg" alt="Memory 31"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+4'; this.classList.add('placeholder');" />
+          <figcaption>I adore you so much 🩷</figcaption>
+        </figure>
+
+        <figure class="card reveal">
+          <img src="images/pic29.jpg" alt="Memory 28"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+4'; this.classList.add('placeholder');" />
+          <figcaption>You are my home 🩷</figcaption>
+        </figure>
+
+        <figure class="card reveal">
+          <img src="images/pic31.jpg" alt="Memory 29"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+4'; this.classList.add('placeholder');" />
+          <figcaption>You are so precious to me 🩷</figcaption>
+        </figure>
+
+         <figure class="card reveal">
+          <img src="images/pic17.jpeg" alt="Memory 17"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+4'; this.classList.add('placeholder');" />
+          <figcaption>I love spending time with you 🩷</figcaption>
+        </figure>
+
+        <figure class="card reveal">
+          <video class="scroll-video" muted loop playsinline preload="metadata" poster="images/poster2.jpg">
+            <source src="images/video6.mp4" type="video/mp4">
+          </video>
+          <figcaption>You are the cutest 🩷</figcaption>
+        </figure>
+
+          <figure class="card reveal">
+          <img src="images/pic27.JPEG" alt="Memory 27"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+4'; this.classList.add('placeholder');" />
+          <figcaption>Thank you for always being by my side and supporting me 🩷</figcaption>
+        </figure>
+
+        <figure class="card reveal">
+          <img src="images/pic34.jpg" alt="Memory 32"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+4'; this.classList.add('placeholder');" />
+          <figcaption>Your style is the best 🩷</figcaption>
+        </figure>
+
+        <figure class="card reveal">
+          <img src="images/pic35.jpg" alt="Memory 33"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+4'; this.classList.add('placeholder');" />
+          <figcaption>You are the most beautiful girl in the world 🩷</figcaption>
+        </figure>
+
+        <figure class="card reveal">
+          <img src="images/pic36.jpg" alt="Memory 34"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+4'; this.classList.add('placeholder');" />
+          <figcaption>You are my sweetheart 🩷</figcaption>
+        </figure>
+
+        <figure class="card reveal">
+          <img src="images/pic37.jpg" alt="Memory 35"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+4'; this.classList.add('placeholder');" />
+          <figcaption>I need you in my life forever 🩷</figcaption>
+        </figure>
+
+        <figure class="card reveal">
+          <video class="scroll-video" muted loop playsinline preload="metadata" poster="images/poster2.jpg">
+            <source src="images/video7.mp4" type="video/mp4">
+          </video>
+          <figcaption>You are so lovely 🩷</figcaption>
+        </figure>
+
+        <figure class="card reveal">
+          <img src="images/pic38.jpg" alt="Memory 36"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+4'; this.classList.add('placeholder');" />
+          <figcaption>You inspire me 🩷</figcaption>
+        </figure>
+
+        <figure class="card reveal">
+          <img src="images/pic39.jpg" alt="Memory 37"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+4'; this.classList.add('placeholder');" />
+          <figcaption>You are elegant 🩷</figcaption>
+        </figure>
+
+        <figure class="card reveal">
+          <img src="images/pic40.jpg" alt="Memory 38"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+4'; this.classList.add('placeholder');" />
+          <figcaption>You are my happiness 🩷</figcaption>
+        </figure>
+
+        <figure class="card reveal">
+          <img src="images/pic41.jpg" alt="Memory 39"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+4'; this.classList.add('placeholder');" />
+          <figcaption>You are my peace 🩷</figcaption>
+        </figure>
+
+        <figure class="card reveal">
+          <img src="images/pic46.jpg" alt="Memory 40"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+4'; this.classList.add('placeholder');" />
+          <figcaption>You are my sunshine 🩷</figcaption>
+        </figure>
+
+        <figure class="card reveal">
+          <video class="scroll-video" muted loop playsinline preload="metadata" poster="images/poster2.jpg">
+            <source src="images/video8.mp4" type="video/mp4">
+          </video>
+          <figcaption>Your beauty is truly beyond words 🩷</figcaption>
+        </figure>
+
+        <figure class="card reveal">
+          <img src="images/pic43.jpg" alt="Memory 41"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+4'; this.classList.add('placeholder');" />
+          <figcaption>You are the kindest person ever 🩷</figcaption>
+        </figure>
+
+        <figure class="card reveal">
+          <img src="images/pic44.jpg" alt="Memory 42"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+4'; this.classList.add('placeholder');" />
+          <figcaption>Thank you for everything that you do 🩷</figcaption>
+        </figure>
+
+      <figure class="card reveal">
+          <img src="images/pic48.jpg" alt="Memory 43"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+4'; this.classList.add('placeholder');" />
+          <figcaption>I wish I could pull you out of pictures and hug you 🩷</figcaption>
+        </figure>
+
+
+        <figure class="card reveal">
+          <img src="images/pic47.jpg" alt="Memory 43"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+4'; this.classList.add('placeholder');" />
+          <figcaption>I am in love with you 🩷</figcaption>
+        </figure>
+
+      
+         <figure class="card reveal">
+          <img src="images/pic45.jpg" alt="Memory 43"
+               onerror="this.src='https://via.placeholder.com/800x800?text=Add+Photo+4'; this.classList.add('placeholder');" />
+          <figcaption>You complete me 🩷</figcaption>
+        </figure>
+
+          <figure class="card reveal">
+          <video class="scroll-video" muted loop playsinline preload="metadata" poster="images/poster2.jpg">
+            <source src="images/video9.mp4" type="video/mp4">
+          </video>
+          <figcaption>Thank you so much for being in my life. 🩷</figcaption>
+        </figure>
+
+      </section>
+
+         
+
+      <footer class="footer">
+        <p>So will you please be my Valentine? 🤍</p>
+      </footer>
+
+      <section class="actions">
+        <button class="btn btn-yes" id="yesBtn" type="button">Yes 💘</button>
+        <button class="btn btn-no" id="noBtn" type="button">No 🙈</button>
+      </section>
+    </section>
+
+    <!-- SCREEN 2: YES + VOICE + PROMISES -->
+    <section id="screenYes" class="screen">
+      <header class="top">
+        <div class="badge">She said YES 💞</div>
+        <h1 class="title">You chose me. I choose you.</h1>
+        <p class="subtitle">Forever.</p>
+      </header>
+
+      <section class="letter-wrap">
+        <div class="letter">
+          <p class="love-letter">
+            Meri jaan, meri zindagi, meri dil ki sukoon, meri shahzadi,
+
+            I do not think you will ever truly understand how much I love you. My whole heart lives inside of you. You are deeply woven into my soul. I do not even think the word love is enough, because what I feel for you is deeper than words and deeper than time itself. It's the the type of love that changes a person. You have made my life so much better and have made me into a better man and a better person.
+
+            You are my home and my safest place. You are the one I run to when the world feels difficult and heavy. You are the one who calms the storms in my life. Just hearing your beautiful voice and just knowing that you are in my life makes everything feel better. You are my peace in chaos and my light on the darkest of days.
+
+            I look at you and I just do not see my wife, I see my blessing and my greatest gift. I see the kind woman who carries my heart so gently with her and gives it so much love and care.
+
+            You carry me and take care of me even when I do not know how to carry myself. I see someone who loves me in ways I never thought I deserved, who stands by me through everything even when I mess up and fall short.
+
+            I appreciate your love more than you know meri jaan. You loved me when I did not even know how to love myself anymore. That means more to me than you will ever know.
+
+            I try my best everyday to make you happy, because you are the source of my happiness. I know I mess up sometimes, I know I stumble, I know I make mistakes. But please believe me when I say that everything I do comes from my deep love for you. I care for you deeply. I want to make you always feel happy, adored, safe, cherished, and never alone. If I ever fail, it is because my heart is so full of love for you that I do not know how to handle the love sometimes.
+
+            You make my life meaningful. You make ordinary days feel special just by being in them. Everyday is special because of you. Loving you is the greatest honor of my life and I will cherish this honor forever.
+
+            I promise that no matter where life takes us and no matter how difficult things get, that you will never face anything in this world without me by your side.
+
+            I will always be here for you my love. I promise to always choose you forever.
+
+            Thank you for loving me the way you do. Thank you for being you. Thank you for being mine. You complete me. You are the safest place my heart has ever known.
+
+            I love you more than words can express, more than time itself, more than anything. You are the best part of my life. You are the reason my life feels worth living. You are my answered dua. Thank you for everything. I love you meri jaan. 
+          </p>
+
+          <div class="signature">
+            <span>— Forever yours 🩷,</span>
+            <strong>Momin</strong>
+          </div>
+        </div>
+      </section>
+
+      <!-- Voice note button -->
+      <section class="voice-wrap reveal">
+        <button class="btn btn-yes" id="voiceBtn" type="button">Press to hear something 💌</button>
+        <p class="voice-sub">It’s me… talking to you 🥺</p>
+      </section>
+
+      <!-- Promise cards -->
+      <section class="promises reveal" aria-label="Promise cards">
+        <h2 class="section-title">My Promises To You 💗</h2>
+        <p class="section-subtitle">Tap a card to flip it.</p>
+
+        <div class="promise-grid">
+          <button class="promise-card" type="button">
+            <div class="promise-inner">
+              <div class="promise-front">Promise #1 💘</div>
+              <div class="promise-back">I promise to always keep you happy 💗</div>
+            </div>
+          </button>
+
+          <button class="promise-card" type="button">
+            <div class="promise-inner">
+              <div class="promise-front">Promise #2 💞</div>
+              <div class="promise-back">I promise to always give you respect 💗</div>
+            </div>
+          </button>
+
+          <button class="promise-card" type="button">
+            <div class="promise-inner">
+              <div class="promise-front">Promise #3 💗</div>
+              <div class="promise-back">I promise to always take care of you 💗</div>
+            </div>
+          </button>
+
+          <button class="promise-card" type="button">
+            <div class="promise-inner">
+              <div class="promise-front">Promise #4 💝</div>
+              <div class="promise-back">I promise to always give you peace and comfort 💗</div>
+            </div>
+          </button>
+
+          <button class="promise-card" type="button">
+            <div class="promise-inner">
+              <div class="promise-front">Promise #5 💓</div>
+              <div class="promise-back">I promise to always be by your side and support you 💗</div>
+            </div>
+          </button>
+
+          <button class="promise-card" type="button">
+            <div class="promise-inner">
+              <div class="promise-front">Promise #6 🫶</div>
+              <div class="promise-back">I promise to always choose you 💗</div>
+            </div>
+          </button>
+        </div>
+      </section>
+
+      <!-- Cute extras (Open When + Roulette + Date Adventure) -->
+<section class="extras reveal" aria-label="Cute extras">
+  <h2 class="section-title">Little Extras For You 💗</h2>
+  <p class="section-subtitle">Tap one — I made these just for you.</p>
+
+  <div class="extras-grid">
+    <button class="extra-card" id="openWhenBtn" type="button">
+      <div class="extra-emoji">💌</div>
+      <div class="extra-title">Open When…</div>
+      <div class="extra-sub">Little letters for every mood</div>
+    </button>
+
+    <button class="extra-card" id="rouletteBtn" type="button">
+      <div class="extra-emoji">🎡</div>
+      <div class="extra-title">Compliment Roulette</div>
+      <div class="extra-sub">Spin for sweetness</div>
+    </button>
+
+    <button class="extra-card" id="dateAdventureBtn" type="button">
+      <div class="extra-emoji">🗺️</div>
+      <div class="extra-title">Pick Our Date</div>
+      <div class="extra-sub">Choose-your-adventure date night</div>
+    </button>
+  </div>
+</section>
+
+
+      <footer class="footer">
+        <p>Want to see what gifts I got for you? 😌</p>
+      </footer>
+
+      <section class="actions">
+        <button class="btn btn-yes" id="toQuizBtn" type="button">Take the Valentine Quiz 💘</button>
+        <button class="btn btn-no" id="backToAskBtn" type="button">Back</button>
+      </section>
+    </section>
+
+    <!-- SCREEN: OPEN WHEN -->
+<section id="screenOpenWhen" class="screen">
+  <header class="top">
+    <div class="badge">Open When… 💌</div>
+    <h1 class="title">For every feeling, my love</h1>
+    <p class="subtitle">Tap an envelope. Each one is a little piece of me.</p>
+  </header>
+
+  <section class="openwhen-wrap">
+    <div class="openwhen-grid" id="openWhenGrid"></div>
+  </section>
+
+  <section class="actions">
+    <button class="btn btn-no" id="openWhenBackBtn" type="button">Back</button>
+  </section>
+</section>
+
+<!-- SCREEN: ROULETTE -->
+<section id="screenRoulette" class="screen">
+  <header class="top">
+    <div class="badge">Compliment Roulette 🎡</div>
+    <h1 class="title">Spin it, my beautiful wife</h1>
+    <p class="subtitle">Every spin is something I mean with my whole heart.</p>
+  </header>
+
+  <section class="roulette-wrap">
+    <div class="roulette-card">
+      <div class="roulette-wheel" id="rouletteWheel">
+        <div class="roulette-center">💗</div>
+      </div>
+
+      <button class="btn btn-yes" id="spinBtn" type="button">Spin 💞</button>
+
+      <p class="roulette-result" id="rouletteResult">Tap Spin 😌</p>
+
+      <div class="roulette-actions">
+        <button class="btn btn-no" id="saveComplimentBtn" type="button">Save ⭐</button>
+        <button class="btn btn-no" id="clearFavoritesBtn" type="button">Clear</button>
+      </div>
+
+      <div class="favorites">
+        <div class="favorites-title">Saved Favorites ⭐</div>
+        <ul class="favorites-list" id="favoritesList"></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="actions">
+    <button class="btn btn-no" id="rouletteBackBtn" type="button">Back</button>
+  </section>
+</section>
+
+<!-- SCREEN: DATE ADVENTURE -->
+<section id="screenDateAdventure" class="screen">
+  <header class="top">
+    <div class="badge">Date Adventure 🗺️</div>
+    <h1 class="title">Pick our date, meri jaan</h1>
+    <p class="subtitle" id="dateStepHint">Step 1 of 3</p>
+  </header>
+
+  <section class="date-wrap">
+    <div class="date-card">
+      <h2 class="date-question" id="dateQuestion">…</h2>
+      <div class="date-options" id="dateOptions"></div>
+
+      <div class="date-nav">
+        <button class="btn btn-no" id="datePrevBtn" type="button">Back</button>
+        <button class="btn btn-yes" id="dateNextBtn" type="button" disabled>Next 💗</button>
+      </div>
+
+      <div class="date-result" id="dateResult" style="display:none;"></div>
+
+      <div class="date-nav" id="dateFinishRow" style="display:none;">
+        <button class="btn btn-yes" id="dateAgainBtn" type="button">Pick Again 💞</button>
+        <button class="btn btn-no" id="dateBackToYesBtn" type="button">Back</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="actions">
+    <button class="btn btn-no" id="dateAdventureBackBtn" type="button">Back</button>
+  </section>
+</section>
+
+
+
+    <!-- SCREEN 3: QUIZ COVER -->
+    <section id="screenQuizCover" class="screen">
+      <header class="top">
+        <div class="badge">Valentine Quiz 💝</div>
+        <h1 class="title">Before you see your surprise…</h1>
+        <p class="subtitle">Get at least <strong>7 out of 10</strong> right to pass 💗</p>
+      </header>
+
+      <section class="cover-grid reveal">
+        <figure class="cover-card">
+          <img src="images/cover1.jpg" alt="Cover 1" loading="lazy" decoding="async"
+               onerror="this.src='https://via.placeholder.com/900x700?text=Cover+Photo+1'; this.classList.add('placeholder');" />
+        </figure>
+        <figure class="cover-card">
+          <img src="images/cover2.jpeg" alt="Cover 2" loading="lazy" decoding="async"
+               onerror="this.src='https://via.placeholder.com/900x700?text=Cover+Photo+2'; this.classList.add('placeholder');" />
+        </figure>
+      </section>
+
+      <section class="quiz-intro reveal">
+        <div class="pill-row">
+          <span class="pill">10 Questions</span>
+          <span class="pill">Need 7+ Correct</span>
+          <span class="pill">For my baby 💘</span>
+        </div>
+        <p class="quiz-note">Ready? No pressure. The quiz is easy… the answer is always love 😭💗</p>
+      </section>
+
+      <section class="actions">
+        <button class="btn btn-yes" id="startQuizBtn" type="button">Start Quiz 💞</button>
+        <button class="btn btn-no" id="quizBackBtn" type="button">Back</button>
+      </section>
+    </section>
+
+    <!-- SCREEN 4: QUIZ -->
+    <section id="screenQuiz" class="screen">
+      <header class="top">
+        <div class="badge">Quiz Time 💘</div>
+        <h1 class="title" id="quizTitle">Question 1 of 10</h1>
+        <p class="subtitle" id="quizPrompt">Need 7/10 to pass 💗</p>
+      </header>
+
+      <section class="quiz-card neon-border reveal is-visible">
+        <div class="progress-wrap" aria-label="Quiz progress">
+          <div class="progress-bar">
+            <div class="progress-fill" id="progressFill" style="width:0%"></div>
+          </div>
+          <div class="progress-text" id="progressText">0 / 10</div>
+        </div>
+
+        <h2 class="quiz-question" id="questionText">…</h2>
+
+        <div class="options" id="optionsWrap"></div>
+        <div class="quiz-feedback" id="feedback"></div>
+
+        <div class="streak-row" aria-label="Streak">
+          <span class="streak-pill">Streak: <strong id="streakText">0</strong> 🔥</span>
+          <span class="streak-msg" id="streakMsg"></span>
+        </div>
+
+        <div class="quiz-actions">
+          <button class="btn btn-no" id="prevBtn" type="button">Back</button>
+          <button class="btn btn-yes" id="nextBtn" type="button" disabled>Next 💗</button>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p id="scoreHint">You got this 😌</p>
+      </footer>
+    </section>
+
+    <!-- SCREEN 5: QUIZ RESULT + VAULT -->
+    <section id="screenQuizResult" class="screen">
+      <header class="top">
+        <div class="badge" id="resultBadge">Result</div>
+        <h1 class="title" id="resultTitle">…</h1>
+        <p class="subtitle" id="resultSubtitle">…</p>
+      </header>
+
+      <section class="result-box reveal">
+        <div class="result-score" id="resultScore">0 / 10</div>
+        <p class="result-note" id="resultNote"></p>
+      </section>
+
+      <!-- Vault (only shows on PASS) -->
+      <section class="vault reveal" id="vaultWrap" style="display:none;">
+        <div class="vault-card">
+          <div class="vault-lock">🔒</div>
+          <h2 class="vault-title">Locked Vault</h2>
+          <p class="vault-sub">Enter the 4-digit code 💗</p>
+
+          <div class="vault-inputs" role="group" aria-label="Vault code">
+            <input class="vault-digit" inputmode="numeric" maxlength="1" aria-label="digit 1" />
+            <input class="vault-digit" inputmode="numeric" maxlength="1" aria-label="digit 2" />
+            <input class="vault-digit" inputmode="numeric" maxlength="1" aria-label="digit 3" />
+            <input class="vault-digit" inputmode="numeric" maxlength="1" aria-label="digit 4" />
+          </div>
+
+          <div class="vault-actions">
+            <button class="btn btn-yes" id="unlockBtn" type="button">Unlock 💝</button>
+            <button class="btn btn-no" id="retryQuizBtn" type="button">Try Again</button>
+          </div>
+
+          <p class="vault-error" id="vaultError"></p>
+        </div>
+      </section>
+
+      <section class="actions" id="resultActions">
+        <button class="btn btn-no" id="resultBackBtn" type="button">Back</button>
+      </section>
+    </section>
+
+    <!-- SCREEN 6: GIFTS (COUNTDOWN + FLIPS + NOTE) -->
+    <section id="screenGifts" class="screen">
+      <header class="top">
+        <div class="badge">Surprise 💘</div>
+        <h1 class="title">Okay… here it is.</h1>
+        <p class="subtitle">I got this for you, my love 🩷</p>
+      </header>
+
+      <!-- Countdown overlay -->
+      <div class="countdown" id="countdown" aria-hidden="true">
+        <div class="count-num" id="countNum">3</div>
+      </div>
+
+      <section class="gifts-stage">
+        <div class="curtain reveal is-visible" id="curtain">
+          <div class="curtain-top"></div>
+          <div class="curtain-bottom"></div>
+          <div class="spotlight"></div>
+
+          <div class="gift-grid">
+            <div class="gift-flip" id="giftFlip1">
+              <div class="gift-inner">
+                <div class="gift-front">Gift #1 🎁</div>
+                <div class="gift-back">
+                  <img src="images/gift1.jpeg" alt="Gift 1"
+                       onerror="this.src='https://via.placeholder.com/900x900?text=Gift+Photo+1'; this.classList.add('placeholder');" />
+                </div>
+              </div>
+            </div>
+
+            <div class="gift-flip" id="giftFlip2">
+              <div class="gift-inner">
+                <div class="gift-front">Gift #2 🎁</div>
+                <div class="gift-back">
+                  <img src="images/gift2.jpeg" alt="Gift 2"
+                       onerror="this.src='https://via.placeholder.com/900x900?text=Gift+Photo+2'; this.classList.add('placeholder');" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="note-wrap">
+          <div class="note-card">
+            <div class="note-header">
+              <span class="note-heart">💘</span>
+              <span class="note-title">A Note For You</span>
+            </div>
+            <pre class="typewriter" id="loveNote"></pre>
+          </div>
+        </section>
+      </section>
+
+      <section class="actions">
+        <button class="btn btn-yes" id="backToYesBtn" type="button">Back 💞</button>
+      </section>
+
+      <footer class="footer">
+        <p>Happy Valentine’s Day, my love 💗</p>
+      </footer>
+    </section>
+
+    <!-- Open When modal -->
+<div class="modal" id="openWhenModal" aria-hidden="true">
+  <div class="modal-card" role="dialog" aria-modal="true">
+    <div class="modal-top">
+      <div class="modal-title" id="modalTitle">Open When…</div>
+      <button class="modal-close" id="modalCloseBtn" type="button">✕</button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
